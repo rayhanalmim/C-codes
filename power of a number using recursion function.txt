@@ -1,0 +1,21 @@
+#include <stdio.h>
+int power();
+
+void main()
+{
+    int b,p,result;
+    printf("enter base: ");
+    scanf("%d",&b);
+    printf("enter power: ");
+    scanf("%d",&p);
+    result = power(b,p);
+    printf("%d^%d is: %d",b,p,result);
+}
+int power(int b,int p)
+{
+    if(p!=0){
+        return b*power(b,p-1);
+    }
+    else
+        return 1;
+}
