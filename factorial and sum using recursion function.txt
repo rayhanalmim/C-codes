@@ -1,0 +1,21 @@
+#include <stdio.h>
+int factorial(int n);
+
+void main()
+{
+    int x,result;
+    printf("enter a negative integer: ");
+    scanf("%d",&x);
+
+    result = factorial(x);
+    printf("factorial of %d is: %d",x,result);
+}
+int factorial(int n)
+{
+
+    if (n !=1){
+        return n * factorial(n-1);
+    }
+    else
+        return n;
+}
