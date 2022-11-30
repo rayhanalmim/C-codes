@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main()
+{
+    int x,y,i,j,sum=0,larg,r,av;
+    printf("\nenter raw of the array: ");
+    scanf("%d",&x);
+    printf("\nenter colum of the array: ");
+    scanf("%d",&y);
+    int a[x][y];
+    larg = a[0][0];
+    r = x*y;
+
+    for(i=0;i<x;i++){
+        for(j=0;j<y;j++){
+            printf("\n\tenter the value of %dth raw of %dth colum: ",i+1,j+1);
+            scanf("%d",&a[i][j]);
+            sum = sum + a[i][j];
+
+            if(a[i][j]>larg){
+                larg = a[i][j];
+            }
+        }
+    }
+    av = sum/r;
+
+    printf("\nthe largest number of the array is: %d",larg);
+    printf("\n\n\tthe sum of the array is : %d\n",sum);
+    printf("\n\t\tthe average of total number is : %d\n",av);
+}
