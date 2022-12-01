@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main()
+{
+    int* pn,n;
+    n = 10;
+    pn = &n;
+    printf("value of n: %d",n);
+    printf("\n memory location of n: %p",&n);
+    printf("\n value of n using pointer: %d",*pn);
+    printf("\n memory location of n using pointer: %p",pn);
+    return 0;
+}
