@@ -1,0 +1,25 @@
+///find the maximum element of an array using pointer.
+#include <stdio.h>
+
+int main()
+{
+    int i,x,max;
+    printf("enter total number of the cell of an array: ");
+    scanf("%d",&x);
+    int arr[x];
+
+    for(i=0;i<x;++i){
+        printf("\n enter value of %dth cell: ",i+1);
+        scanf("\n %d",arr+i);
+    }
+
+     max = *arr;
+
+     for(i=0;i<x;++i){
+        if(*(arr+i)>max){
+            max = *(arr+i);
+        }
+     }
+    printf("\n maximum number of the array is : %d",max);
+
+}
