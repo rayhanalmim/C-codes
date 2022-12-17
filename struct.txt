@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>
+
+struct info{
+    char p[20];
+    int citycode;
+    float salary;
+}person1;
+int main()
+{
+    strcpy(person1.p,"rayhan");
+    person1.citycode = 22353;
+    person1.salary = 300000.00;
+
+    printf("\nname: %s",person1.p);
+    printf("\ncity code: %d",person1.citycode);
+    printf("\nsalary: %.2f",person1.salary);
+    return 0;
+}
